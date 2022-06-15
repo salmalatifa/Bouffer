@@ -1,0 +1,331 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Quicksand:wght@300&display=swap');
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: #0c0c0c;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .skip-link {
+     position: absolute;
+     width: 10%;
+     top: -60%;
+     left: 0;
+     background-color: #dcca87;
+     color: #0c0c0c;
+     padding: 8px;
+     z-index: 100;
+     font-family: 'Quicksand', sans-serif, monospace;
+ }
+ 
+ .skip-link:focus {
+     top: 0;
+ }
+ 
+ span {
+     color: #dcca87;
+ }
+ 
+ nav {
+     display: flex;
+     justify-content: space-between;
+     height: 80px;
+     align-items: center;
+     background-color: #0c0c0c;
+ }
+ 
+ nav ul {
+     display: flex;
+     list-style: none;
+     text-align: center;
+     margin: 0;
+ }
+ 
+ .navListContainer {
+     display: block;
+     font-family: 'Quicksand', sans-serif, monospace;
+ }
+ 
+ nav ul li a {
+     box-sizing: border-box;
+     display: inline-block;
+     padding: 1.3em;
+     text-decoration: none;
+     font-size: 20px;
+     color: whitesmoke;
+     width: fit-content;
+ }
+ 
+ .nav-link::after {
+     content: '';
+     display: block;
+     width: 0px;
+     height: 3px;
+     background: #dcca87;
+     transition: 0.3s;
+ }
+ 
+ .nav-link:hover::after {
+     width: 100%;
+ }
+ 
+ #active {
+     color: #dcca87;
+ }
+ 
+ .drawer {
+     display: none;
+ }
+ 
+ .hamburgerButton {
+     font-size: 32px;
+     display: block;
+     width: 30px;
+     border: none;
+     background: none;
+     color: #dcca87;
+ }
+ 
+ .containerHero {
+     position: relative;
+ }
+ 
+ .hero {
+     display: flex;
+     align-items: center;
+     min-height: 400px;
+     width: 100%;
+     filter: brightness(50%);
+     text-align: center;
+     background-image: url("../public/images/heros/hero-image_1.jpg");
+     background-position: center;
+     background-size: cover;
+ }
+ 
+ .hero__inner {
+     margin: 0 auto;
+     max-width: 800px;
+     background-color: rgba(12, 12, 12, 0.95);
+     color: white;
+     font-weight: bold;
+     border: 2px solid #dcca87;
+     z-index: 2;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 80%;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .hero__title {
+     color: #dcca87;
+     font-weight: 500;
+     font-size: 36px;
+     font-family: 'Cormorant Upright', sans-serif, monospace;
+ }
+ 
+ .hero__tagline {
+     color: #fff;
+     margin-top: 16px;
+     font-size: 18px;
+     font-weight: 300;
+     font-family: 'Quicksand', sans-serif, monospace;
+ }
+ 
+ h3 {
+     font-family: 'Cormorant Upright', sans-serif, monospace;
+     margin: 0;
+     font-size: 200%;
+     color: #dcca87;
+     text-align: left;
+     font-size: 24px;
+ }
+ 
+ main {
+     flex: 1;
+     font-family: 'Quicksand', sans-serif, monospace;
+ }
+ 
+ .form-container {
+     font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
+     padding: 5% 25%;
+     background-image: url("../public/images/background/BG.png");
+ }
+ 
+ .form-content {
+     padding: 2% 2%;
+     text-align: center;
+     border: 1px solid rgba(220, 202, 135, 0.5);
+     background-color: #0c0c0c;
+ }
+ 
+ #reservation__title {
+     color: whitesmoke;
+     text-align: center;
+     font-family: 'Quicksand', sans-serif, monospace;
+ }
+ 
+ form {
+     display: flex;
+ }
+ 
+ form>input {
+     width: 30.33%;
+     background-color: #0c0c0c;
+     color: #dcca87;
+     border: 1px solid #dcca87;
+     min-height: 44px;
+     margin: 10px;
+ }
+ 
+ .btn {
+     border-radius: 10px;
+     background-color: #dcca87;
+     margin: 20px 0px;
+     padding: 10px;
+     max-height: 44px;
+     border: none;
+     color: #0c0c0c;
+     font-size: 16px;
+     font-family: 'Quicksand', sans-serif, monospace;
+     font-weight: bold;
+ }
+ 
+ .btn:hover,
+ .btn:active {
+     color: whitesmoke;
+     background-color: rgba(220, 202, 135, 0.5);
+     border: solid 1px rgba(220, 202, 135, 0.5);
+     transition: 0.4s;
+ }
+ 
+ h2 {
+     font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
+     color: #dcca87;
+     font-size: 200%;
+     text-align: center;
+     margin-top: 1px;
+ }
+ 
+ .second-content-container {
+     display: flex;
+     margin: 50px 0px;
+ }
+ 
+ .main-content {
+     padding: 50px;
+ }
+ 
+ .right-second-content {
+     padding-left: 30px;
+     font-size: 20px;
+     padding-top: 0;
+ }
+ 
+ .relax {
+     width: 400px;
+     border-radius: 5px;
+ }
+ 
+ #relax-desc {
+     font-family: 'Quicksand', sans-serif, monospace;
+     text-align: justify;
+     color: whitesmoke;
+     font-size: 20px;
+     padding-top: 0;
+ }
+ 
+ .btn1 {
+     border-radius: 10px;
+     background-color: #dcca87;
+     margin-top: 5px;
+     padding: 10px;
+     border: none;
+     color: #0c0c0c;
+     font-size: 16px;
+     font-family: 'Quicksand', sans-serif, monospace;
+     font-weight: bold;
+ }
+ 
+ button,
+ a div {
+     min-width: 44px;
+     min-height: 44px;
+     cursor: pointer;
+ }
+ 
+ .logo {
+     padding: 1.3em;
+ }
+ 
+ hr {
+     width: 100%;
+ }
+ 
+ .title-list {
+     font-size: 200%;
+     color: whitesmoke;
+     text-align: left;
+     margin-top: 1rem;
+     text-align: center;
+ }
+ 
+ .list-restaurant {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     column-gap: 10px;
+     row-gap: 20px;
+     padding: 0 30px;
+     margin-top: 24px;
+ }
+ 
+ .list-restaurant .card {
+     padding: 16px;
+     border-radius: 5px;
+     border: dotted rgba(245, 245, 245, 0.5);
+ }
+ 
+ #anchor {
+     text-decoration: none;
+ }
+ 
+ .resto1,
+ .resto2 {
+     width: 100%;
+     border-radius: 5px;
+ }
+ 
+ .location {
+     color: whitesmoke;
+     font-family: 'Quicksand', sans-serif, monospace;
+     font-size: 18px;
+     margin: 10px 0px;
+ }
+ 
+ .description {
+     font-size: 15px;
+     width: 100%;
+     text-align: justify;
+ }
+ 
+ .maps {
+     width: 20px;
+ }
+ 
+ .card:hover {
+     box-shadow: 0px 6px 10px 0px rgba(245, 245, 245, 0.93);
+ }
+ 
+ footer {
+     color: rgba(245, 245, 245, 0.5);
+     background-image: url("../public/images/background/BG.png");
+     font-family: 'Quicksand', sans-serif, monospace;
+     text-align: center;
+     font-size: 17px;
+     font-weight: lighter;
+     padding: 5px;
+ }
