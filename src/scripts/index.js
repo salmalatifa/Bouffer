@@ -4,7 +4,7 @@ import '../styles/responsive.css';
 import icon from '../public/images/icon/favicon.ico';
 import logo from '../public/images/logo/logo-light.png';
 import App from './view/app';
-// import relax from '../public/images/other/ngafe.jpg';
+import swRegister from './utils/sw-register';
 
 window.addEventListener('load', () => {
     document.querySelector('.logo').setAttribute('src', logo);
@@ -23,4 +23,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
     app.renderPage();
+    swRegister();
 });

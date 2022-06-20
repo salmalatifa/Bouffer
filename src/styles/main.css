@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Quicksand:wght@300&display=swap');
+ @import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=Quicksand:wght@300;700&display=swap");
  body {
      margin: 0;
      padding: 0;
@@ -17,7 +17,7 @@
      color: #0c0c0c;
      padding: 8px;
      z-index: 100;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
  }
  
  .skip-link:focus {
@@ -41,11 +41,12 @@
      list-style: none;
      text-align: center;
      margin: 0;
+     text-decoration: none;
  }
  
  .navListContainer {
      display: block;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
  }
  
  nav ul li a {
@@ -59,7 +60,7 @@
  }
  
  .nav-link::after {
-     content: '';
+     content: "";
      display: block;
      width: 0px;
      height: 3px;
@@ -125,7 +126,7 @@
      color: #dcca87;
      font-weight: 500;
      font-size: 36px;
-     font-family: 'Cormorant Upright', sans-serif, monospace;
+     font-family: "Cormorant Upright", sans-serif, monospace;
  }
  
  .hero__tagline {
@@ -133,11 +134,11 @@
      margin-top: 16px;
      font-size: 18px;
      font-weight: 300;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
  }
  
  h3 {
-     font-family: 'Cormorant Upright', sans-serif, monospace;
+     font-family: "Cormorant Upright", sans-serif, monospace;
      margin: 0;
      font-size: 200%;
      color: #dcca87;
@@ -147,77 +148,34 @@
  
  main {
      flex: 1;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
  }
+ /* input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+} */
  
- .form-container {
-     font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
-     padding: 5% 25%;
-     background-image: url("../public/images/background/BG.png");
- }
- 
- .form-content {
-     padding: 2% 2%;
-     text-align: center;
-     border: 1px solid rgba(220, 202, 135, 0.5);
-     background-color: #0c0c0c;
- }
- 
- #reservation__title {
-     color: whitesmoke;
-     text-align: center;
-     font-family: 'Quicksand', sans-serif, monospace;
- }
- 
- form {
-     display: flex;
- }
- 
- form>input {
-     width: 30.33%;
-     background-color: #0c0c0c;
-     color: #dcca87;
-     border: 1px solid #dcca87;
-     min-height: 44px;
-     margin: 10px;
- }
- 
- .btn {
-     border-radius: 10px;
-     background-color: #dcca87;
-     margin: 20px 0px;
-     padding: 10px;
-     max-height: 44px;
-     border: none;
-     color: #0c0c0c;
-     font-size: 16px;
-     font-family: 'Quicksand', sans-serif, monospace;
-     font-weight: bold;
- }
- 
- .btn:hover,
- .btn:active {
-     color: whitesmoke;
-     background-color: rgba(220, 202, 135, 0.5);
-     border: solid 1px rgba(220, 202, 135, 0.5);
-     transition: 0.4s;
- }
- 
+ h1,
  h2 {
-     font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
+     font-family: "Cormorant Upright", "Courier New", sans-serif, monospace;
      color: #dcca87;
      font-size: 200%;
      text-align: center;
      margin-top: 1px;
  }
  
- .second-content-container {
-     display: flex;
-     margin: 50px 0px;
- }
- 
  .main-content {
-     padding: 50px;
+     padding: 5%;
  }
  
  .right-second-content {
@@ -232,7 +190,7 @@
  }
  
  #relax-desc {
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
      text-align: justify;
      color: whitesmoke;
      font-size: 20px;
@@ -247,7 +205,7 @@
      border: none;
      color: #0c0c0c;
      font-size: 16px;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
      font-weight: bold;
  }
  
@@ -296,12 +254,32 @@
  .resto1,
  .resto2 {
      width: 100%;
+     position: relative;
      border-radius: 5px;
+ }
+ 
+ .resto-item__header {
+     position: relative;
+ }
+ 
+ .restoRating {
+     position: absolute;
+     bottom: 10px;
+     left: 0;
+     margin: 0px;
+     display: inline-block;
+     background-color: rgba(12, 12, 12, 0.8);
+     color: white;
+     min-height: 0px;
+ }
+ 
+ .resto-header__rating__score {
+     margin: 7px 10px 7px 10px;
  }
  
  .location {
      color: whitesmoke;
-     font-family: 'Quicksand', sans-serif, monospace;
+     font-family: "Quicksand", sans-serif, monospace;
      font-size: 18px;
      margin: 10px 0px;
  }
@@ -320,12 +298,162 @@
      box-shadow: 0px 6px 10px 0px rgba(245, 245, 245, 0.93);
  }
  
- footer {
-     color: rgba(245, 245, 245, 0.5);
-     background-image: url("../public/images/background/BG.png");
+ #detailRestoContainer {
+     padding-bottom: 30px;
+ }
+ 
+ .detailsResto {
+     display: flex;
+     font-family: "Quicksand", sans-serif, monospace;
+     color: rgba (245, 245, 245, 0.65);
+ }
+ 
+ .detailsResto ul {
+     margin-top: 0px;
+ }
+ 
+ .header3 {
      font-family: 'Quicksand', sans-serif, monospace;
+     font-size: 1.rem;
+     padding-bottom: 1rem;
+ }
+ 
+ .header3__item {
+     font-family: 'Quicksand', sans-serif, monospace;
+     font-size: 1rem;
+ }
+ 
+ .resto__name {
+     text-align: left;
+ }
+ 
+ .img__resto {
+     width: 55vw;
+     position: relative;
+ }
+ 
+ .categories {
+     display: flex;
+     font-weight: 900;
+     color: black;
+     padding: 0px 5px;
+     background-color: #dcca87;
+     width: fit-content;
+     border-radius: 2px;
+ }
+ 
+ #overview {
+     padding-top: 2rem;
+ }
+ 
+ .container-des,
+ p {
+     color: whitesmoke;
+     text-align: justify;
+ }
+ 
+ .title__menu {
      text-align: center;
+     font-size: 0.7rem;
+ }
+ 
+ .detail>p {
+     font-weight: 300;
+     color: rgba(245, 245, 245, 0.65);
+ }
+ 
+ #menuList {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 3%;
+     margin-bottom: 30px;
+ }
+ 
+ #menu-list-title {
+     text-align: center;
+     grid-column-start: 1;
+     grid-column-end: 3;
+ }
+ 
+ .food__list__title,
+ .drink__list__title {
+     text-align: left;
+ }
+ 
+ .food__list__item,
+ .drink__list__item {
+     line-height: 250%;
+     color: whitesmoke;
+     padding: 0px;
+ }
+ 
+ form {
+     font-family: "Cormorant Upright", "Courier New", sans-serif, monospace;
+     padding: 5% 25%;
+     display: flex;
+ }
+ 
+ .form-content {
+     padding: 2% 2%;
+     text-align: center;
+     background-image: url("../public/images/background/BG.png");
+ }
+ 
+ form>input {
+     padding-left: 5px;
+     width: 30.33%;
+     background-color: rgba(0, 0, 0, 0);
+     color: #dcca87;
+     border: 1px solid #F5EFDB;
+     min-height: 44px;
+     margin: 10px;
+ }
+ 
+ .btn {
+     background-color: #dcca87;
+     max-height: 44px;
+     padding: 0px 5px;
+     border: none;
+     color: #0c0c0c;
+     font-size: 14px;
+     font-family: "Cormorant Upright", sans-serif, monospace;
+     font-weight: bold;
+ }
+ 
+ .btn:hover,
+ .btn:active {
+     color: whitesmoke;
+     background-color: rgba(220, 202, 135, 0.5);
+     border: solid 1px rgba(220, 202, 135, 0.5);
+     transition: 0.4s;
+ }
+ 
+ .like {
+     width: 55px;
+     height: 55px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #dcca87;
+     position: fixed;
+     bottom: 16px;
+     right: 16px;
+     border-radius: 50%;
+     border: 0;
+     font-size: 18px;
+     color: black;
+     cursor: pointer;
+ }
+ 
+ footer {
+     background-image: url("../public/images/background/BG.png");
+     font-family: "Quicksand", sans-serif, monospace;
      font-size: 17px;
      font-weight: lighter;
      padding: 5px;
+ }
+ 
+ #footer {
+     text-align: center;
+     color: rgba(245, 245, 245, 0.5);
  }
