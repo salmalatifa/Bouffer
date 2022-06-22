@@ -9,6 +9,7 @@ const CONFIG = {
     CACHE_NAME: 'RestoCatalogue',
     DATABASE_VERSION: 1,
     OBJECT_STORE_NAME: 'resto',
+    WEB_SOCKET_SERVER: 'wss://localhost:8080',
 };
 
 export default CONFIG;

@@ -1,6 +1,6 @@
 import UrlParser from "../../routes/url-parser";
 import RestoDbSource from "../../data/restodb-source";
-import { createRestoDetailTemplate, createLikeButtonTemplate } from "../templates/template-creator";
+import { createRestoDetailTemplate, createLikeButtonTemplate, nothingToLike } from "../templates/template-creator";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
 
 const Detail = {
@@ -14,8 +14,8 @@ const Detail = {
                 <div class="form-content">
                     <p>Feedback is our love language</p>
                     <form>                
-                        <input for="inputName" type="text" class="form-control" id="inputName" aria-label="input name" placeholder="Full Name">               
-                        <textarea for="inputReview" type="text" class="form-control" id="inputReview" aria-label="input review" placeholder="Your Story about This Place"></textarea>   
+                        <input for="inputName" type="text" class="form-control" id="inputName" aria-label="input your name" placeholder="Full Name">               
+                        <input for="inputReview" type="text" class="form-control" id="inputReview" aria-label="input your review" placeholder="Your Story about This Place">   
                     </form>
                     <button id="submit-review" type="submit" class="btn" id="btn" aria-label="submit review">Submit</button>
                 </div>
@@ -28,11 +28,9 @@ const Detail = {
 
     async afterRender() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
-        const { restaurants } = await RestoDbSource.detailResto(url.id);
+        const restaurants = await RestoDbSource.detailResto(url.id);
         const restoContainer = document.querySelector('#detail-page');
         restoContainer.innerHTML = createRestoDetailTemplate(restaurants.restaurant);
-        // const likeButtonContainer = document.querySelector('#likeButtonContainer');
-        // likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
         LikeButtonInitiator.init({
             likeButtonContainer: document.querySelector('#likeButtonContainer'),

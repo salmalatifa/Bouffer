@@ -1,6 +1,6 @@
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
-async function swRegister() {
+const swRegister = async() => {
     if ('serviceWorker' in navigator) {
         await runtime.register();
         return;

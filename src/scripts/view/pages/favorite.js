@@ -24,10 +24,10 @@ const Favorite = {
     async afterRender() {
         const resto = await FavoriteRestoIdb.getAllResto();
         const restoContainer = document.querySelector('.list-restaurant');
+
         resto.forEach((data) => {
-                restoContainer.innerHTML += createRestoItemTemplate(data);
-            })
-            // restoContainer.innerHTML = nothingToLike();
+            restoContainer.innerHTML += createRestoItemTemplate(data);
+        })
     },
 
 
