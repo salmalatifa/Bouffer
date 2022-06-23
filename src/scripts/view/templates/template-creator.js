@@ -135,6 +135,6 @@ const createLikedButtonTemplate = () => `
 </button>
 `
 
-const nothingToLike = () =>'<p class="nothing">Nothing Here</p>'
+const nothingToLike = () =>`<p class="nothing">Nothing Here</p>`
 
 export { createRestoItemTemplate, createRestoDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate, nothingToLike };

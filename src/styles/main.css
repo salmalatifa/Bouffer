@@ -154,7 +154,6 @@
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
     font-size: 16px;
     background-color: white;
     background-image: url('searchicon.png');
@@ -174,7 +173,7 @@
      margin-top: 1px;
  }
  
- .main-content {
+ main {
      padding: 5%;
  }
  
@@ -403,7 +402,7 @@
      padding-left: 5px;
      width: 30.33%;
      background-color: rgba(0, 0, 0, 0);
-     color: #dcca87;
+     color: rgba(245, 245, 245, 0.7);
      border: 1px solid #F5EFDB;
      min-height: 44px;
      margin: 10px;
@@ -451,9 +450,6 @@
      font-size: 17px;
      font-weight: lighter;
      padding: 5px;
- }
- 
- #footer {
      text-align: center;
      color: rgba(245, 245, 245, 0.5);
  }

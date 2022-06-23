@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link class="icon" rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="manifest" href="manifest.json">
+    <meta name="description" content="My Reccomendation Redtaurant" />
     <meta name="theme-color" content="#000000" />
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
     <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
@@ -14,34 +15,11 @@
 </head>
 
 <body>
-    <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+    <a href="#mainContent" class="skip-link">Go to Main Content</a>
     <header>
-        <nav class="nav" id="nav">
-            <div class="logo-apps">
-                <a href="#bouffer">
-                    <div class="div"><img src="" alt="Logo" class="logo"></div>
-                </a>
-            </div>
-            <div class="drawer">
-                <button id="menu" class="hamburgerButton">☰</button>
-            </div>
-            <div class="navListContainer">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#/home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#/favorite" class="nav-link">Favorite</a></li>
-                    <li class="nav-item"><a href="https://www.linkedin.com/in/salma-lathifah-b945651aa" class="nav-link">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="containerHero" id="bouffer">
-            <div class="hero" id="hero"></div>
-            <div class="hero__inner">
-                <h1 class="hero__title">The key to Fine dining </h1>
-                <p class="hero__tagline">Vous pouvez voir la salle de chaque restaurant que vous souhaitez visiter. Choisissez votre endroit préféré pour sortir et déguster de délicieux plats avec vos proches. </p>
-            </div>
-        </div>
+        <app-bar></app-bar>
+        <hero-element></hero-element>
     </header>
-
     <main id="mainContent" tabindex="0">
         <!-- <div class="form-container">
             <div class="form-content">
@@ -54,28 +32,11 @@
                 </form>
                 <button type="button" class="btn" id="btn" aria-label="to reservation">Book Now</button>
             </div>
-        </div> -->
-        <!-- <div class="second-content-container">
-                <div class="left-second-content">
-                    <img src="" alt="A Girl reading book with coffee in front of her " class="relax ">
-                </div>
-                <div class="right-second-content ">
-                    <h3>Relax or work in restaurant </h3>
-                    <p id="relax-desc">The restaurant is a gathering place for friends, family, relatives, and friends. Here we often share stories, laugh together, play games together, and take a break from our busy careers. Restaurants are also a place where we find inspiration
-                        and new friends. Through BOUFFER we can see the restaurant we want and according to its character. This app provides you with the best and up-to-date restaurant recommendations, regardless of age. With BOUFFER we can get it all
-                        in one hand.</p>
-                </div>
             </div> -->
         <div class="main-content">
         </div>
     </main>
-
-    <footer>
-        <div id="footer">
-            <p id="footer">Copyright &copy; 2022 - BOUFFER</p>
-        </div>
-    </footer>
-
+    <footer-bar></footer-bar>
 </body>
 
 </html>
