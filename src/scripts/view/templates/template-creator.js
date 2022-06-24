@@ -117,7 +117,7 @@ const createRestoDetailTemplate = ({
                     <p class="reviewer__comment">${review.review} 
                     </p>
                 </div> `
-                )}
+                ).join('')}
         </div>
     </div>
 </div>
@@ -135,6 +135,4 @@ const createLikedButtonTemplate = () => `
 </button>
 `
 
-const nothingToLike = () =>`<p class="nothing">Nothing Here</p>`
-
-export { createRestoItemTemplate, createRestoDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate, nothingToLike };
+export { createRestoItemTemplate, createRestoDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };

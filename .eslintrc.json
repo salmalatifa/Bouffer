@@ -12,5 +12,6 @@
   "rules": { 
     "indent": "off", 
     "linebreak-style": "off",
-    "eol-last":"off",  }
+    "eol-last":"off" 
+   }
 }

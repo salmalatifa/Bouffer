@@ -135,6 +135,7 @@
      font-size: 18px;
      font-weight: 300;
      font-family: "Quicksand", sans-serif, monospace;
+     text-align: center;
  }
  
  h3 {
@@ -149,20 +150,8 @@
  main {
      flex: 1;
      font-family: "Quicksand", sans-serif, monospace;
+     padding: 5% 5% 3% 5%;
  }
- /* input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-} */
  
  h1,
  h2 {
@@ -173,8 +162,9 @@
      margin-top: 1px;
  }
  
- main {
-     padding: 5%;
+ #second-content-container {
+     display: flex;
+     margin: 50px 0px;
  }
  
  .right-second-content {
@@ -194,18 +184,6 @@
      color: whitesmoke;
      font-size: 20px;
      padding-top: 0;
- }
- 
- .btn1 {
-     border-radius: 10px;
-     background-color: #dcca87;
-     margin-top: 5px;
-     padding: 10px;
-     border: none;
-     color: #0c0c0c;
-     font-size: 16px;
-     font-family: "Quicksand", sans-serif, monospace;
-     font-weight: bold;
  }
  
  button,
@@ -301,6 +279,14 @@
      padding-bottom: 30px;
  }
  
+ .detail-deskrip {
+     padding-left: 1em;
+ }
+ 
+ .detail-deskrip>li>p {
+     text-align: left;
+ }
+ 
  .detailsResto {
      display: flex;
      font-family: "Quicksand", sans-serif, monospace;
@@ -374,7 +360,11 @@
      grid-column-end: 3;
  }
  
- .food__list__title,
+ .food__list__item,
+ .food__list__title {
+     text-align: right;
+ }
+ 
  .drink__list__title {
      text-align: left;
  }
@@ -386,37 +376,85 @@
      padding: 0px;
  }
  
- form {
-     font-family: "Cormorant Upright", "Courier New", sans-serif, monospace;
-     padding: 5% 25%;
-     display: flex;
+ #review {
+     padding: 40px 0;
  }
  
- .form-content {
-     padding: 2% 2%;
-     text-align: center;
+ .review-list {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 5px;
+ }
+ 
+ .review__card {
+     margin-top: 10px;
+     padding: 10px;
+     box-shadow: rgba(245, 245, 245, 0.35) 0px 5px 15px;
+     width: 28vw;
+     border-radius: 20px;
+     border-bottom: solid 1px #F5EFDB;
+     margin-bottom: 15px;
+ }
+ 
+ .identity {
+     display: flex;
+     justify-content: space-between;
+     color: rgb(156, 156, 156);
+     margin-bottom: 10px;
+     padding-left: 5px;
+ }
+ 
+ #reviewer__name {
+     font-weight: bold;
+ }
+ 
+ .reviewer__comment {
+     text-align: left;
+ }
+ 
+ .formContainer {
+     font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
+     padding: 5% 5%;
      background-image: url("../public/images/background/BG.png");
  }
  
- form>input {
-     padding-left: 5px;
-     width: 30.33%;
+ form {
+     font-family: "Cormorant Upright", "Courier New", sans-serif, monospace;
+     display: flex;
+     flex-direction: column;
+ }
+ /* .form-content {
+     padding: 2% 2%;
+     text-align: center;
+ } */
+ 
+ form>input,
+ #inputReview {
+     width: 100%;
      background-color: rgba(0, 0, 0, 0);
      color: rgba(245, 245, 245, 0.7);
      border: 1px solid #F5EFDB;
      min-height: 44px;
-     margin: 10px;
+     min-width: 44px;
+     margin: 1em 0;
+     padding-left: 5px;
+ }
+ 
+ #inputReview {
+     height: 7vh;
+     padding-top: 1em;
  }
  
  .btn {
      background-color: #dcca87;
-     max-height: 44px;
-     padding: 0px 5px;
-     border: none;
      color: #0c0c0c;
      font-size: 14px;
      font-family: "Cormorant Upright", sans-serif, monospace;
      font-weight: bold;
+     border: 1px solid #dcca87;
+     min-width: 44px;
+     min-height: 44px;
+     width: fit-content;
  }
  
  .btn:hover,
@@ -446,10 +484,15 @@
  
  footer {
      background-image: url("../public/images/background/BG.png");
+     background-size: cover;
      font-family: "Quicksand", sans-serif, monospace;
      font-size: 17px;
      font-weight: lighter;
-     padding: 5px;
-     text-align: center;
+     padding: 1em;
      color: rgba(245, 245, 245, 0.5);
+ }
+ 
+ footer>p {
+     text-align: center;
+     margin: 0;
  }

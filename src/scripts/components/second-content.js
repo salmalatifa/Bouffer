@@ -7,7 +7,7 @@ customElements.define('second-content', class extends HTMLElement {
 
     render() {
         this.innerHTML = `
-<div class="second-content-container">
+<div id="second-content-container">
     <div class="left-second-content">
         <img src="${relax}" alt="A Girl reading book with coffee in front of her" class="relax" >
     </div>

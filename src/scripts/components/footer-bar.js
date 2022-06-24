@@ -5,8 +5,8 @@ customElements.define('footer-bar', class extends HTMLElement {
 
     render() {
         this.innerHTML = `
-        <div id="footer">
-            <p id="footer__content">Copyright &copy; 2022 - BOUFFER</p>
-        </div>`
+        <footer>
+            <p>Copyright &copy; 2022 - BOUFFER</p>
+        </footer>`
     }
 })

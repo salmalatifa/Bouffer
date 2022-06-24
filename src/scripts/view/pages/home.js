@@ -5,14 +5,7 @@ import '../../components/second-content';
 const Home = {
     async render() {
         return `
-        <div class="searchBox"> 
-            <div class="container-search">      
-                <form>
-                    <input type="search" id="search" placeholder="Search Restaurant ..." />
-                </form>
-            </div> 
-        </div>
-
+        <second-content></second-content>
         </div class="restaurant">
             <h3 class="title-list ">List <span>Restaurant</span></h3>
             <hr>
@@ -20,7 +13,6 @@ const Home = {
             </div>
         </div>
         
-        <second-content></second-content>
       `;
     },
 
