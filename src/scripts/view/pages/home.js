@@ -12,7 +12,6 @@ const Home = {
             <div class="list-restaurant ">
             </div>
         </div>
-        
       `;
     },
 

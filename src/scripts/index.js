@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
     document.querySelector('.icon').setAttribute('href', icon);
 });
 
+
 const app = new App({
     button: document.querySelector('#menu'),
     drawer: document.querySelector('.navListContainer'),

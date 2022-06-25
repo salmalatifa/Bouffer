@@ -1,5 +1,15 @@
 /* Responsive breakpoint */
 
+@media screen and (max-width: 900px) {
+    .review-list {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .identity {
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 768px) {
     nav ul {
         position: fixed;
@@ -43,7 +53,7 @@
         padding: 0;
     }
     .hero__inner {
-        top: 50%
+        top: 50%;
     }
     .img__resto {
         width: 100%;
@@ -65,7 +75,7 @@
         font-size: smaller;
         font-family: 'Cormorant Upright', 'Courier New', sans-serif, monospace;
         padding: 5% 25%;
-        background-image: url("../public/images/background/BG.png");
+        background-image: url('../public/images/background/BG.png');
     }
     form {
         flex-direction: column;
@@ -76,6 +86,16 @@
         width: 100%;
         min-height: 44px;
         margin: 10px;
+    }
+    .review-list {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+    .review__card {
+        width: 50%;
+    }
+    .detailsResto {
+        flex-direction: column;
     }
 }
 

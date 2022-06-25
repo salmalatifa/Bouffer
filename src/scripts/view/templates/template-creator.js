@@ -1,8 +1,6 @@
 import CONFIG from "../../globals/config";
 import maps from "../../../public/images/icon/map.png";
-// import cocktail from "../../../public/images/other/cocktail.png"
 import spoon from "../../../public/images/icon/spoon.png";
-
 
 const createRestoItemTemplate = ({
     id,

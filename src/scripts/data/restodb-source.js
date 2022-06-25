@@ -1,5 +1,4 @@
 import API_ENDPOINT from '../globals/api-endpoint';
-// import CONFIG from '../globals/config'
 
 class RestoDbSource {
     static async getListRestaurant() {
@@ -16,14 +15,14 @@ class RestoDbSource {
 
     static async addReview(review) {
         const response = await fetch(API_ENDPOINT.POST_REVIEW, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(review)
-            })
-            // return await response.json();
-        return response;
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+        const data = await response.json();
+        return data;
     }
 }
 

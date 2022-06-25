@@ -58,7 +58,7 @@ const Detail = {
                 nameInput.value = ''
                 reviewInput.value = ''
             } else if (nameInput.value.length > 200 || reviewInput.value.length > 200) {
-                alert('Max character must 200 character')
+                alert('Max character must 200 characters')
                 nameInput.value = ''
                 reviewInput.value = ''
             } else {

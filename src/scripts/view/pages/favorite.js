@@ -4,14 +4,6 @@ import { createRestoItemTemplate, nothingToLike } from "../templates/template-cr
 const Favorite = {
     async render() {
         return `
-        <div class="searchBox"> 
-            <div class="container-search">      
-                <form>
-                    <input type="search" id="search" placeholder="Search Restaurant ..." />
-                </form>
-            </div> 
-        </div>
-
         </div class="restaurant">
             <h3 class="title-list ">List <span>Your Favourite </span>Restaurant</h3>
             <hr>
