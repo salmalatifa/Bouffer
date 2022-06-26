@@ -55,16 +55,16 @@ const Detail = {
         const reviewInput = document.querySelector('#inputReview');
         const loader = document.querySelector('#loading');
 
-        function displayLoading() {
-            // loader.classList.add('display');
-            // setTimeout(() => {
-            //     loader.classList.remove('display');
-            // }, 5000);
-        }
+        // function displayLoading() {
+        //     loader.classList.add('display');
+        //     setTimeout(() => {
+        //         loader.classList.remove('display');
+        //     }, 5000);
+        // }
 
-        function hideLoading() {
-            loader.classList.remove('display');
-        }
+        // function hideLoading() {
+        //     loader.classList.remove('display');
+        // }
 
         btnSubmit.addEventListener('click', (e) => {
             e.preventDefault();
@@ -77,14 +77,14 @@ const Detail = {
                 nameInput.value = '';
                 reviewInput.value = '';
             } else {
+                loader.classList.add('display');
                 // eslint-disable-next-line no-undef
                 setTimeOut(() => {
-                    loader.classList.add('display');
+                    loader.classList.remove('display');
                     PostReview(url, nameInput.value, reviewInput.value);
                 }, 5000);
                 nameInput.value = '';
                 reviewInput.value = '';
-                hideLoading();
             }
         });
     },
