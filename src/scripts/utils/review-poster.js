@@ -1,11 +1,12 @@
-import RestoDbSource from "../data/restodb-source";
+/* eslint-disable import/no-cycle */
+import RestoDbSource from '../data/restodb-source';
 
 const PostReview = (url, name, review) => {
     const dataInput = {
         id: url.id,
         name,
-        review
-    }
+        review,
+    };
     RestoDbSource.addReview(dataInput);
 
     const reviewList = document.getElementsByClassName('review-list');
@@ -19,8 +20,9 @@ const PostReview = (url, name, review) => {
         </div>
         <p class="reviewer__comment">${review}</p>
     </div>
-    `
+    `;
+
     reviewList.innerHTML += newReview;
-}
+};
 
 export default PostReview;

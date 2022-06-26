@@ -1,11 +1,12 @@
+/* eslint-disable no-restricted-globals */
 import 'regenerator-runtime';
-import CacheHelper from './utils/cache-helper'
+import CacheHelper from './utils/cache-helper';
 
 const { assets } = global.serviceWorkerOption;
 
 // Caching App Shell Resource
 self.addEventListener('install', (event) => {
-    event.waitUntil(CacheHelper.cachingAppShell([...assets, './']))
+    event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 });
 
 // Delete old caches
@@ -15,5 +16,5 @@ self.addEventListener('activate', (event) => {
 
 // Add or get fetch request to / from caches
 self.addEventListener('fetch', (event) => {
-    event.respondWith(CacheHelper.revalidateCache(event.request))
+    event.respondWith(CacheHelper.revalidateCache(event.request));
 });

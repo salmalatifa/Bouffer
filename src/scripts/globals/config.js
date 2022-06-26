@@ -1,4 +1,4 @@
-//file untuk konfigurasi ke dokumentasi api
+// file untuk konfigurasi ke dokumentasi api
 
 const CONFIG = {
     BASE_URL: 'https://restaurant-api.dicoding.dev/',

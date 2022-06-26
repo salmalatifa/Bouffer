@@ -4,8 +4,7 @@ customElements.define('app-bar', class extends HTMLElement {
     }
 
     render() {
-        this.innerHTML =
-            `<nav class="nav" id="nav">
+        this.innerHTML = `<nav class="nav" id="nav">
     <div class="logo-apps">
         <a href="#bouffer">
             <div class="div"><img src="" alt="Logo" class="logo"></div>
@@ -22,6 +21,6 @@ customElements.define('app-bar', class extends HTMLElement {
         </ul>
     </div>
 </nav>
-`
+`;
     }
-})
+});

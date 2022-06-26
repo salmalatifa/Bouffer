@@ -503,13 +503,13 @@ footer {
     color: rgba(245, 245, 245, 0.5);
 }
 
-
-/* loading animation */
-
 footer>p {
     text-align: center;
     margin: 0;
 }
+
+
+/* loading animation */
 
 #loading {
     width: 2rem;
@@ -522,9 +522,10 @@ footer>p {
     animation: spin 1s infinite linear;
 }
 
-#loading.display {
+
+/* #loading.display {
     visibility: visible;
-}
+} */
 
 @keyframes spin {
     from {

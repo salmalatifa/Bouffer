@@ -1,5 +1,5 @@
-import FavoriteRestoIdb from "../../data/favorite-resto-idb";
-import { createRestoItemTemplate, nothingToLike } from "../templates/template-creator";
+import FavoriteRestoIdb from '../../data/favorite-resto-idb';
+import { createRestoItemTemplate } from '../templates/template-creator';
 
 const Favorite = {
     async render() {
@@ -19,10 +19,8 @@ const Favorite = {
 
         resto.forEach((data) => {
             restoContainer.innerHTML += createRestoItemTemplate(data);
-        })
+        });
     },
-
-
 };
 
 export default Favorite;

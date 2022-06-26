@@ -1,8 +1,10 @@
-import UrlParser from "../../routes/url-parser";
-import RestoDbSource from "../../data/restodb-source";
-import { createRestoDetailTemplate } from "../templates/template-creator";
-import LikeButtonInitiator from "../../utils/like-button-initiator";
-import PostReview from "../../utils/review-poster";
+/* eslint-disable import/no-cycle */
+/* eslint-disable no-alert */
+import UrlParser from '../../routes/url-parser';
+import RestoDbSource from '../../data/restodb-source';
+import { createRestoDetailTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import PostReview from '../../utils/review-poster';
 
 const Detail = {
     async render() {
@@ -14,6 +16,7 @@ const Detail = {
             <div class="formContainer">
                 <div class="form-content">
                     <h2 style="text-align: center;">Feedback is our love language</h2>
+                    <div id="loading"></div>
                     <form>                
                         <input type="text" class="form-control" id="inputName" aria-label="input your name" placeholder="Your Full Name"> 
 
@@ -43,30 +46,47 @@ const Detail = {
                 description: restaurants.restaurant.description,
                 pictureId: restaurants.restaurant.pictureId,
                 rating: restaurants.restaurant.rating,
-                city: restaurants.restaurant.city
-            }
-        })
+                city: restaurants.restaurant.city,
+            },
+        });
 
-        const btnSubmit = document.querySelector('.btn')
-        const nameInput = document.querySelector('#inputName')
-        const reviewInput = document.querySelector('#inputReview')
+        const btnSubmit = document.querySelector('.btn');
+        const nameInput = document.querySelector('#inputName');
+        const reviewInput = document.querySelector('#inputReview');
+        const loader = document.querySelector('#loading');
+
+        function displayLoading() {
+            // loader.classList.add('display');
+            // setTimeout(() => {
+            //     loader.classList.remove('display');
+            // }, 5000);
+        }
+
+        function hideLoading() {
+            loader.classList.remove('display');
+        }
 
         btnSubmit.addEventListener('click', (e) => {
-            e.preventDefault()
+            e.preventDefault();
             if (nameInput.value === '' || reviewInput.value === '') {
-                alert('Please fill in all the fields')
-                nameInput.value = ''
-                reviewInput.value = ''
+                alert('Please fill in all the fields');
+                nameInput.value = '';
+                reviewInput.value = '';
             } else if (nameInput.value.length > 200 || reviewInput.value.length > 200) {
-                alert('Max character must 200 characters')
-                nameInput.value = ''
-                reviewInput.value = ''
+                alert('Max character must 200 characters');
+                nameInput.value = '';
+                reviewInput.value = '';
             } else {
-                PostReview(url, nameInput.value, reviewInput.value)
-                nameInput.value = ''
-                reviewInput.value = ''
+                // eslint-disable-next-line no-undef
+                setTimeOut(() => {
+                    loader.classList.add('display');
+                    PostReview(url, nameInput.value, reviewInput.value);
+                }, 5000);
+                nameInput.value = '';
+                reviewInput.value = '';
+                hideLoading();
             }
-        })
+        });
     },
 };
 

@@ -1,6 +1,8 @@
-import CONFIG from "../../globals/config";
-import maps from "../../../public/images/icon/map.png";
-import spoon from "../../../public/images/icon/spoon.png";
+/* eslint-disable prefer-template */
+/* eslint-disable no-undef */
+import CONFIG from '../../globals/config';
+import maps from '../../../public/images/icon/map.png';
+import spoon from '../../../public/images/icon/spoon.png';
 
 const createRestoItemTemplate = ({
     id,
@@ -8,7 +10,7 @@ const createRestoItemTemplate = ({
     name,
     city,
     description,
-    rating
+    rating,
 } = data) => `
 <a href="#/detail/${id}" id="anchor">
     <div class="card">
@@ -24,7 +26,7 @@ const createRestoItemTemplate = ({
                 <h4 class="location">
                     <img src="${maps}" alt="" width="20">  ${city}
                 </h4>
-                <p style="color:whitesmoke;">${description.length>150?(description.slice(0,150)+'...'):''}</p>
+                <p style="color:whitesmoke;">${description.length > 150 ? (description.slice(0, 150) + '...') : ''}</p>
             </div>
         </div>
     </div>
@@ -40,7 +42,7 @@ const createRestoDetailTemplate = ({
     categories,
     description,
     menus,
-    customerReviews
+    customerReviews,
 } = detail) => `
 <h1 class="resto__name"> ${name} <span>Restaurant</span></h1>
 <div id="detailRestoContainer">
@@ -65,7 +67,8 @@ const createRestoDetailTemplate = ({
                     <h3 class="header3__sub">Categories</h3>
                     </p>
                     ${categories.map(
-                        (category) => `<p class="categories">${category.name}</p>`).join('')}
+                        (category) => `<p class="categories">${category.name}</p>`,
+).join('')}
                 </li>
             </ul>
         </div>
@@ -106,7 +109,7 @@ const createRestoDetailTemplate = ({
 
     <div id="review">
         <div class="review-list">
-            ${customerReviews.map((review) =>`
+            ${customerReviews.map((review) => `
                 <div class="review__card">
                     <div class="identity">
                         <p id="reviewer__name">${review.name}</p>
@@ -114,8 +117,7 @@ const createRestoDetailTemplate = ({
                     </div>
                     <p class="reviewer__comment">${review.review} 
                     </p>
-                </div> `
-                ).join('')}
+                </div> `).join('')}
         </div>
     </div>
 </div>
@@ -125,12 +127,17 @@ const createLikeButtonTemplate = () => `
 <button aria-label="like this movie" id="likeButton" class="like">
 <i class="fa fa-heart-o" aria-hidden="true"></i>
 </button>
-`
+`;
 
 const createLikedButtonTemplate = () => `
 <button aria-label="unlike this movie" id="likeButton" class="like">
 <i class="fa fa-heart" aria-hidden="true"></i>
 </button>
-`
+`;
 
-export { createRestoItemTemplate, createRestoDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export {
+    createRestoItemTemplate,
+    createRestoDetailTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate,
+};

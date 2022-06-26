@@ -1,4 +1,5 @@
-import CONFIG from "../globals/config";
+/* eslint-disable no-underscore-dangle */
+import CONFIG from '../globals/config';
 
 const CacheHelper = {
     async cachingAppShell(requests) {
@@ -15,6 +16,7 @@ const CacheHelper = {
 
     async revalidateCache(request) {
         const response = await caches.match(request);
+
         if (response) {
             return response;
         }

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const UrlParser = {
     parseActiveUrlWithCombiner() {
         const url = window.location.hash.slice(1).toLowerCase();
@@ -20,9 +21,7 @@ const UrlParser = {
     },
 
     _urlCombiner(splitedUrl) {
-        return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/') +
-            (splitedUrl.id ? '/:id' : '') +
-            (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
+        return (splitedUrl.resource ? `/${splitedUrl.resource}` : '/') + (splitedUrl.id ? '/:id' : '') + (splitedUrl.verb ? `/${splitedUrl.verb}` : '');
     },
 };
 

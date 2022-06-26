@@ -18,6 +18,6 @@ customElements.define('second-content', class extends HTMLElement {
             in one hand.</p>
     </div>
 </div>
-`
+`;
     }
-})
+});

@@ -1,35 +1,36 @@
+/* eslint-disable no-underscore-dangle */
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class App {
     constructor({ button, drawer, content }) {
-        this._button = button
-        this._drawer = drawer
-        this._content = content
+        this._button = button;
+        this._drawer = drawer;
+        this._content = content;
 
-        this._initialAppShell()
+        this._initialAppShell();
     }
 
     _initialAppShell() {
         DrawerInitiator.init({
             button: this._button,
-            drawer: this._drawer
-        })
+            drawer: this._drawer,
+        });
     }
 
     async renderPage() {
-        const url = UrlParser.parseActiveUrlWithCombiner()
-        const page = routes[url]
-        this._content.innerHTML = await page.render()
-        await page.afterRender()
+        const url = UrlParser.parseActiveUrlWithCombiner();
+        const page = routes[url];
+        this._content.innerHTML = await page.render();
+        await page.afterRender();
 
-        const skipLinkElement = document.querySelector('.skip-link')
+        const skipLinkElement = document.querySelector('.skip-link');
         skipLinkElement.addEventListener('click', (event) => {
-            event.preventDefault()
-            document.querySelector('#mainContent').focus()
-        })
+            event.preventDefault();
+            document.querySelector('#mainContent').focus();
+        });
     }
 }
 
-export default App
+export default App;
