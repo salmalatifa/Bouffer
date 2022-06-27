@@ -5,25 +5,24 @@ import RestoDbSource from '../../data/restodb-source';
 import { createRestoDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import PostReview from '../../utils/review-poster';
+import displayLoading from '../../utils/load-page';
 
 const Detail = {
     async render() {
         return `
         <div id="detailPage">
             <div class="container" id="detail">
+            <div id="loading"></div>
                 <div class="detail-page" id="detail-page"></div>
             </div>
             <div class="formContainer">
                 <div class="form-content">
                     <h2 style="text-align: center;">Feedback is our love language</h2>
-                    <div id="loading"></div>
-                    <form>                
-                        <input type="text" class="form-control" id="inputName" aria-label="input your name" placeholder="Your Full Name"> 
-
-                        <textarea name="restoreview" type="text" class="form-control" id="inputReview" aria-label="input your review" placeholder="Your Story about This Place"></textarea>
-                    
-                        <button type="submit" value="Submit" class="btn" id="submit-review" aria-label="submit your review">Share Mine</button>
+                    <form id="formReview">                
+                        <input type="text" class="form-control" id="inputName" aria-label="input your name" placeholder="Your Full Name">                         
                     </form>
+                    <input form="formReview" name="restoreview" type="text" class="form-control" id="inputReview" aria-label="input your review" placeholder="Your Story about This Place"></input>                    
+                    <button type="submit" value="Submit" class="btn" id="submit-review" aria-label="submit your review">Share Mine</button>
                 </div>
             </div>
 
@@ -36,7 +35,12 @@ const Detail = {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const restaurants = await RestoDbSource.detailResto(url.id);
         const restoContainer = document.querySelector('#detail-page');
-        restoContainer.innerHTML += createRestoDetailTemplate(restaurants.restaurant);
+        const loader = document.querySelector('#loading');
+        displayLoading(loader);
+        setTimeout(() => {
+            restoContainer.innerHTML += createRestoDetailTemplate(restaurants.restaurant);
+            loader.remove();
+        }, 500);
 
         LikeButtonInitiator.init({
             likeButtonContainer: document.querySelector('#likeButtonContainer'),
@@ -53,18 +57,6 @@ const Detail = {
         const btnSubmit = document.querySelector('.btn');
         const nameInput = document.querySelector('#inputName');
         const reviewInput = document.querySelector('#inputReview');
-        const loader = document.querySelector('#loading');
-
-        // function displayLoading() {
-        //     loader.classList.add('display');
-        //     setTimeout(() => {
-        //         loader.classList.remove('display');
-        //     }, 5000);
-        // }
-
-        // function hideLoading() {
-        //     loader.classList.remove('display');
-        // }
 
         btnSubmit.addEventListener('click', (e) => {
             e.preventDefault();
@@ -77,12 +69,8 @@ const Detail = {
                 nameInput.value = '';
                 reviewInput.value = '';
             } else {
-                loader.classList.add('display');
                 // eslint-disable-next-line no-undef
-                setTimeOut(() => {
-                    loader.classList.remove('display');
-                    PostReview(url, nameInput.value, reviewInput.value);
-                }, 5000);
+                PostReview(url, nameInput.value, reviewInput.value);
                 nameInput.value = '';
                 reviewInput.value = '';
             }

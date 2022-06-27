@@ -26,11 +26,9 @@ var serviceWorkerOption = {
     "/images/icon/spoonlarge.png",
     "/images/icon/spoonmedium.png",
     "/images/icon/unlike.png",
+    "/images/other/ngafe.jpg",
     "/images/logo/logo-dark.png",
     "/images/logo/logo-light.png",
-    "/images/other/cocktail.png",
-    "/images/other/ngafe.jpg",
-    "/images/other/noodle.png",
     "/index.html"
   ]
 };
