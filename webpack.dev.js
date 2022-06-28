@@ -6,6 +6,15 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
     mode: 'development',
     devServer: {
+        open: true,
+        port: 8081,
         contentBase: path.resolve(__dirname, 'dist'),
+        client: {
+            overlay: {
+                errors: true,
+                warnings: true,
+            },
+        },
+        compress: true,
     },
 });
