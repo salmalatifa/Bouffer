@@ -1,12 +1,14 @@
 import relax from '../../public/images/other/ngafe.jpg';
 
-customElements.define('second-content', class extends HTMLElement {
+customElements.define(
+  'second-content',
+  class extends HTMLElement {
     connectedCallback() {
-        this.render();
+      this.render();
     }
 
     render() {
-        this.innerHTML = `
+      this.innerHTML = `
 <div id="second-content-container">
     <div class="left-second-content">
         <img src="${relax}" alt="A Girl reading book with coffee in front of her" class="relax" >
@@ -20,4 +22,5 @@ customElements.define('second-content', class extends HTMLElement {
 </div>
 `;
     }
-});
+  }
+);

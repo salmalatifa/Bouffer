@@ -1,3 +1,5 @@
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
@@ -12,22 +14,22 @@ import CONFIG from './globals/config';
 import WebSocketInitiator from './utils/websocket-initiator';
 
 window.addEventListener('load', () => {
-    document.querySelector('.logo').setAttribute('src', logo);
-    document.querySelector('.icon').setAttribute('href', icon);
+  document.querySelector('.logo').setAttribute('src', logo);
+  document.querySelector('.icon').setAttribute('href', icon);
 });
 
 const app = new App({
-    button: document.querySelector('#menu'),
-    drawer: document.querySelector('.navListContainer'),
-    content: document.querySelector('#mainContent'),
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('.navListContainer'),
+  content: document.querySelector('#mainContent'),
 });
 
 window.addEventListener('hashchange', () => {
-    app.renderPage();
+  app.renderPage();
 });
 
 window.addEventListener('load', () => {
-    app.renderPage();
-    swRegister();
-    WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  app.renderPage();
+  swRegister();
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });
